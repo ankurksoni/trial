@@ -1,17 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    @foreach ($student_list as $student)
+         {{$student->id}},{{ $student->first_name }} <br>
+    @endforeach
+    {!! $student_list->links() !!}
 @endsection

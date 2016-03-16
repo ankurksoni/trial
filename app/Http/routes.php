@@ -11,6 +11,8 @@
 |
 */
 
+Route::model('student', '\App\Student');
+
 Route::get('/', function () {
     return view('welcome');
 });
